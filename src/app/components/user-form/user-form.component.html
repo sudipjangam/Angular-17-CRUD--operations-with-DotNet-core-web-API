@@ -1,0 +1,62 @@
+<div>
+  @if(isEdit){
+    <h4>Edit User Details</h4>
+  }@else {
+  <h4>Create User Form</h4>}
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input type="text" matInput
+               placeholder="Name" formControlName="name">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput
+               placeholder="Ex. pat@example.com" formControlName="email">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <mat-label>Phone</mat-label>
+        <input type="text" matInput
+               placeholder="Ex. 1234567890" formControlName="phone">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <mat-label>Age</mat-label>
+        <input type="number" matInput
+               placeholder="Ex. 25" formControlName="age">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <mat-label>Role</mat-label>
+        <input type="text" matInput placeholder="Ex. Admin" formControlName="role">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <mat-label>Salary</mat-label>
+        <input type="number" matInput
+               placeholder="Ex. 12000" formControlName="salary">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+    <div class="w-full flex flex-wrap">
+      @if (isEdit) {
+      <button mat-raised-button color="primary" [disabled]="!userForm.valid">Update</button>
+      }@else {
+      <button mat-raised-button color="primary" [disabled]="!userForm.valid" type="submit">Submit</button>
+      }
+    </div>
+  </form>
+</div>
