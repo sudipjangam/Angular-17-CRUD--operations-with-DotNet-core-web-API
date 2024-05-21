@@ -28,12 +28,21 @@ namespace CRUD_dotnet_api.Data
       }
       if (User != null)
       {
-        User.Name = model.Name;
+        User.FirstName = model.FirstName;
+        User.LastName = model.LastName;
         User.Email = model.Email;
-        User.Phone = model.Phone;
-        User.Age = model.Age;
+        User.Regions = model.Regions;
         User.Role = model.Role;
-        User.salary = model.salary;
+        User.Monikers = model.Monikers;
+        User.Modules = model.Modules;
+        User.Traders = model.Traders;
+        User.Flowtypes = model.Flowtypes;
+        //User.Name = model.Name;
+        //User.Email = model.Email;
+        //User.Phone = model.Phone;
+        //User.Age = model.Age;
+        //User.Role = model.Role;
+        //User.salary = model.salary;
         await _appDbContext.SaveChangesAsync();
       }
     }
@@ -64,12 +73,17 @@ namespace CRUD_dotnet_api.Data
       }
       if (User != null)
       {
-        User.Name = model.Name;
-        //.Email = model.Email;
-        User.Phone = model.Phone;
-        User.Age = model.Age;
+        User.FirstName = model.FirstName;
+        User.LastName = model.LastName;
+        User.Email = model.Email;
+        User.Regions = model.Regions;
         User.Role = model.Role;
-        User.salary = model.salary;
+        User.Monikers = model.Monikers;
+        User.Modules = model.Modules;
+        User.Traders = model.Traders;
+        User.Flowtypes = model.Flowtypes;
+
+
         await _appDbContext.SaveChangesAsync();
       }
     }

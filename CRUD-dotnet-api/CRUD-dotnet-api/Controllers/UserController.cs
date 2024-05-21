@@ -2,6 +2,7 @@ using CRUD_dotnet_api.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Data.SqlClient;
 
 namespace CRUD_dotnet_api.Controllers
 {
@@ -46,6 +47,33 @@ namespace CRUD_dotnet_api.Controllers
     {
       await _userRepository.UpdateUser(id, model);
       return Ok();
+    }
+
+    [HttpGet("monikers")]
+    public async Task<ActionResult<List<string>>> GetMonikers()
+    {
+      List<string> monikers = new List<string>();
+
+      // Assuming connectionString is defined somewhere accessible
+      string connectionString = "Server=localhost;Database=UserListDB;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;";
+
+      using (SqlConnection connection = new SqlConnection(connectionString))
+      {
+        string query = "SELECT name FROM monikerList3";
+        SqlCommand command = new SqlCommand(query, connection);
+
+        await connection.OpenAsync(); // Using asynchronous methods
+
+        SqlDataReader reader = await command.ExecuteReaderAsync();
+
+        while (await reader.ReadAsync())
+        {
+          string moniker = reader["name"].ToString();
+          monikers.Add(moniker);
+        }
+      }
+
+      return Ok(monikers);
     }
   }
 }

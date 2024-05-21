@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUD-dotnet-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78f1d076dd7f3892df8a74d061bf9993b6e31c20")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4d27c0f1ed89dab0f0847ed6952306169944350")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUD-dotnet-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUD-dotnet-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

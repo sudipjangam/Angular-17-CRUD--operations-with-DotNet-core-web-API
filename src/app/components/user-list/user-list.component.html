@@ -1,7 +1,11 @@
-@if (UserList && UserList.length>0) {
+<!-- @if (UserList && UserList.length>0) { -->
 <div class="mat-elevation-z8 w-full ">
   <div class="flex justify-end p-8 text-right" style="padding: 15px; text-align: right;"><button mat-raised-button color="primary" routerLink="/create-user"> Add User</button></div>
   <div >User:</div>
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+  </mat-form-field>
   <table mat-table [dataSource]="UserList">
 
     <!--- Note that these columns can be defined in any order.
@@ -91,4 +95,4 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>
-}
+<!-- } -->

@@ -67,4 +67,9 @@ export class UserListComponent {
       this.ngOnInit();
     });
   }
+  applyFilter(value: string) {
+    value = value.trim(); // Remove whitespace
+    value = value.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+    // this.UserList.filter = value;
+  }
 }
