@@ -1,4 +1,3 @@
-<div>
   @if(isEdit){
     <h4>Edit User Details</h4>
   }@else {
@@ -6,15 +5,28 @@
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div class="w-full flex flex-wrap">
       <mat-form-field class="example-full-width">
-        <mat-label>Name</mat-label>
+        <!-- <mat-label>FirstName</mat-label> -->
+        <label>First Name</label>
         <input type="text" matInput
-               placeholder="Name" formControlName="name">
+               placeholder="First Name" formControlName="firstName">
         <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
       </mat-form-field>
     </div>
+
     <div class="w-full flex flex-wrap">
       <mat-form-field class="example-full-width">
-        <mat-label>Email</mat-label>
+        <!-- <mat-label>LastName</mat-label> -->
+        <label>Last Name</label>
+        <input type="text" matInput
+               placeholder="Last Name" formControlName="lastName">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <!-- <mat-label>Email</mat-label> -->
+        <label>Email</label>
         <input type="email" matInput
                placeholder="Ex. pat@example.com" formControlName="email">
         <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
@@ -22,41 +34,90 @@
     </div>
     <div class="w-full flex flex-wrap">
       <mat-form-field class="example-full-width">
-        <mat-label>Phone</mat-label>
-        <input type="text" matInput
-               placeholder="Ex. 1234567890" formControlName="phone">
-        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
-      </mat-form-field>
-    </div>
-    <div class="w-full flex flex-wrap">
-      <mat-form-field class="example-full-width">
-        <mat-label>Age</mat-label>
-        <input type="number" matInput
-               placeholder="Ex. 25" formControlName="age">
-        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
-      </mat-form-field>
-    </div>
-    <div class="w-full flex flex-wrap">
-      <mat-form-field class="example-full-width">
-        <mat-label>Role</mat-label>
+        <!-- <mat-label>Role</mat-label> -->
+        <label>Role</label>
         <input type="text" matInput placeholder="Ex. Admin" formControlName="role">
         <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
       </mat-form-field>
     </div>
+
     <div class="w-full flex flex-wrap">
       <mat-form-field class="example-full-width">
-        <mat-label>Salary</mat-label>
-        <input type="number" matInput
-               placeholder="Ex. 12000" formControlName="salary">
+        <!-- <mat-label>Regions</mat-label> -->
+        <label>Regions</label>
+        <input type="text" matInput
+               placeholder="Regions" formControlName="regions">
         <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
       </mat-form-field>
     </div>
+
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <!-- <mat-label>Monikers</mat-label> -->
+        <label>Monikers</label>
+        <input type="text" matInput
+               placeholder="Moniker" formControlName="monikers">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <!-- <mat-label>Modules</mat-label> -->
+        <label>Modules</label>
+        <input type="text" matInput
+               placeholder="Modules" formControlName="modules">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <!-- <mat-label>Flowtypes</mat-label> -->
+        <label>Flowtypes</label>
+        <input type="text" matInput
+               placeholder="Flowtype" formControlName="flowtypes">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <!-- <mat-label>Traders</mat-label> -->
+        <label>Traders</label>
+        <input type="text" matInput
+               placeholder="Traders" formControlName="traders">
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      </mat-form-field>
+    </div>
+
+    <!-- <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput
+               placeholder="Password" formControlName="password">
+         <mat-hint>Errors appear instantly!</mat-hint> -->
+      <!-- </mat-form-field> -->
+    <!-- </div> -->
+<!--
+    <div class="w-full flex flex-wrap">
+      <mat-form-field class="example-full-width">
+        <mat-label>Confirm Password</mat-label>
+        <input type="password" matInput
+               placeholder="Confirm Password" formControlName="confirmPassword"> -->
+        <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+      <!-- </mat-form-field> -->
+    <!-- </div> -->
+
+
+
+
     <div class="w-full flex flex-wrap">
       @if (isEdit) {
       <button mat-raised-button color="primary" [disabled]="!userForm.valid">Update</button>
       }@else {
-      <button mat-raised-button color="primary" [disabled]="!userForm.valid" type="submit">Submit</button>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
       }
     </div>
   </form>
-</div>
+<!-- <app-data></app-data> -->

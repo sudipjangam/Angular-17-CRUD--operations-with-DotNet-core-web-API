@@ -1,10 +1,17 @@
 export interface IUserData {
   id?: number;
-  name: string;
+  firstName:string;
+  lastName:string;
   email: string;
-  // password: string;
-  phone: string;
   role: string;
-  age: number;
-  salary: number;
+  regions:string ;
+  monikers:string;
+  modules:string;
+  flowtypes:string;
+  traders:string;
+  // name: string;
+  // password: string;
+  // phone: string;
+  // age: number;
+  // salary: number;
 }

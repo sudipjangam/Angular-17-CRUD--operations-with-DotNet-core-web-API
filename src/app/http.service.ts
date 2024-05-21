@@ -24,4 +24,7 @@ export class HttpService {
   deleteUser(id: number) {
     return this.http.delete(this.apiUrl + '/api/User/' + id);
   }
+  getMonikersdata(){
+    return this.http.get(this.apiUrl + '/api/User/monikers')
+  }
 }
